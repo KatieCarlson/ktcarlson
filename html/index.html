@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Katie's Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mystyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/navigation.js"></script>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar is-transparent is-fixed-top" role="navigation">
+      <!-- Left Section -->
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img src="../Graphics/logo-01.png" alt="kc" width="50" height="50">
+        </a>
+        <!-- burger menu for mobile devices -->
+        <a role="button" class="navbar-burger burger is-transparent" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');" data-target="pages">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+    <div id="pages" class="navbar-menu">
+      <!-- Middle Section -->
+      <div class="navbar-start" style="flex-grow: 1;">
+        <a class="navbar-item" style="font-size: 2rem; font-weight: 600; line-height: 1.125">
+          Katie Carlson
+        </a>
+      </div>
+      <!-- Right Section -->
+      <div class="navbar-end">
+        <a class="navbar-item">
+          Interactive Resume
+        </a>
+        <a class="navbar-item" style="padding: 0.25rem 3rem 0.25rem 1rem">
+          Projects
+        </a>
+      </div>
+    </div>
+
+  </nav>
+
+    <!-- Main Content -->
+    <section class="section">
+      <div class="container">
+        <h1 class="title">
+          Hello World
+        </h1>
+        <p class="subtitle">
+          My first website with <strong>Bulma</strong>!
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit
+          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
