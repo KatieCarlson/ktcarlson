@@ -2,16 +2,21 @@
 // npm run css-build
 // npm start to watch changes
 
+// add long professional image to top of resume
+
 // Import the initial variables
 @import "../node_modules/bulma/sass/utilities/initial-variables";
 @import "../node_modules/bulma/sass/utilities/functions";
 
 // Set my own initial variables
-$blue: #354E6E;
-$turquoise: #C8F9EF;
-$blue-light: #79AECD;
-$turquoise-light: #E0FBFC;
-$orange: #F69F8E;
+$blue: #3b838c;
+$blue-dark: #184e61;
+$red: #e9c6b2;
+$red-dark: #e9c6b250;
+$yellow: #e8f5ff;
+$green: #edf6f0;
+$green-dark: #70af81;
+$grey: #7d7d7d;
 // Add a serif family
 $family-sans-serif: "Nunito", sans-serif;
 
@@ -38,3 +43,196 @@ $navbar-background-color: $blue;
 @import "../node_modules/bulma/sass/components/navbar.sass";
 @import "../node_modules/bulma/sass/layout/hero.sass";
 @import "../node_modules/bulma/sass/layout/section.sass";
+
+/* navbar */
+.navbar-item img {
+  max-height: 5rem;
+  border: 1px solid $white;
+}
+.navbar, .navbar-menu {
+  background-color: $blue;
+  box-shadow: none;
+  min-height: 4.75rem;
+}
+.navbar-item, .navbar-link {
+  color: $white;
+  padding: 0.25rem 1.5rem;
+}
+a.navbar-item:hover, .navbar-link:hover {
+  color: $red;
+}
+.navbar-brand a.navbar-item {
+  padding: 0rem;
+  padding-left: 0.75rem;
+}
+/* custom burger for mobile */
+.navbar-burger {
+  color: $white;
+  height: 4.75rem;
+  position: relative;
+  width: 5rem;
+  margin-left: auto;
+}
+.navbar-burger span:nth-child(1) {
+    top: calc(50% - 10px);
+}
+.navbar-burger span:nth-child(2) {
+    top: calc(50%);
+}
+.navbar-burger span:nth-child(3) {
+    top: calc(50% + 10px);
+}
+.navbar-burger span {
+    height: 2px;
+    left: calc(50% - 16px);
+    width: 32px;
+}
+
+/* scrolling sidebar content */
+html {
+	scroll-behavior: smooth
+}
+.sticky	{
+	position: sticky;
+  position: -webkit-sticky;
+  top: 140px;
+}
+.menu-list {
+  line-height: 2.5rem;
+  width: 8rem;
+}
+.menu-list a {
+  color: $white;
+  text-align: center;
+  border-radius: 0;
+}
+.menu-list a.is-active {
+  background-color: $green;
+  color: $blue;
+}
+.menu-list a:hover {
+  background-color: $green;
+  color: $green-dark;
+}
+.scrollable {
+  scroll-margin-top: 3em;
+}
+
+/* scrolling sections */
+.section {
+  padding: 6rem 1rem;
+}
+.outer-wrap {
+  z-index: 0;
+}
+.layer-one {
+  width: 128px;
+  margin-top: 45px;
+  z-index: 1;
+  background-color: $blue;
+  left: 40px;
+}
+.primary {
+  background-color: $white;
+  margin: 0;
+  max-width: none;
+}
+.secondary {
+  background-color: $yellow;
+  margin: 0;
+  max-width: none;
+}
+
+/* written content */
+h2 {
+  font-size: 54px;
+  text-align: center;
+}
+h3 {
+  font-size: 28px;
+}
+h2, h3 {
+  font-weight: 300;
+  color: #22A39F;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  color: $blue;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, b {
+  font-family: 'Open Sans', sans-serif !important;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: inherit;
+  color: $blue;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.lead {
+  text-align: center;
+  color: #727878;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+hr {
+  margin: 40px 0px;
+  border-color: #727878;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  border: 0;
+  border-top: 1px solid #eee;
+  height: 0;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+hr {
+  height: 2px;
+  background-color: $blue;
+}
+@media only screen and (max-width: $tablet) {
+    #menu-head {
+        display: none;
+    }
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  vertical-align: center;
+  margin: 30px;
+}
+a.logo {
+    width: 11%;
+    padding-top: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media only screen and (max-width: $tablet) {
+    img.logo {
+        display: none;
+    }
+}
